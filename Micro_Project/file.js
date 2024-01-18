@@ -36,9 +36,9 @@ var rollno,name,clas,hra,da,deduction;
 rollno=$('#rollno').val();
 name=$('#name').val();
 clas=$('#class').val();
-hra=$('#hra').val();
-da=$('#da').val();
-deduction=$('#deduction').val();
+birth=$('#birth').val();
+address=$('#address').val();
+enrollment=$('#enrollment').val();
 
 if(rollno===''){
     alert('stuloyee rollno missing');
@@ -55,17 +55,17 @@ if(clas===''){
     $('#class').focus();
     return '';
 }
-if(hra===''){
+if(birth===''){
     alert('stuloyee HRA missing');
     $('#hra').focus();
     return '';
 }
-if(da===''){
+if(address===''){
     alert('stuloyee DA missing');
     $('#da').focus();
     return '';
 }
-if(deduction===''){
+if(enrollment===''){
     alert('stuloyee deduction missing');
     $('#deduction').focus();
     return '';
@@ -74,9 +74,9 @@ if(deduction===''){
     rollno:rollno,
     name:name,
     class:clas,
-    hra:hra,
-    da:da,
-    deduction:deduction
+    birth:hra,
+    address:da,
+    enrollment:deduction
  }
  return JSON.stringify(jsonStrObj);
 }
@@ -111,9 +111,9 @@ function fillData(jsonObj){
  var data=JSON.parse(jsonObj.data).record;
  $('#name').val(data.name);
  $('#class').val(data.class);
- $('#hra').val(data.hra);
- $('#da').val(data.da);
- $('#deduction').val(data.deduction);
+ $('#birth').val(data.hra);
+ $('#address').val(data.da);
+ $('#enrollment').val(data.deduction);
 }
 
 function getdata(){
