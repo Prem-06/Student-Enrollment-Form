@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+</head>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .container{
+  min-width:90vw;  
+  width: auto;   
+  min-height: 100vh;
+  height: auto; 
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+background-color: #b400ff;
+
+    }
+.form-div{
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 80%;
+   background-color: rgb(174 91 181);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 1px 1px 2px black;
+}
+form{
+    width: 75%;
+}
+.item{
+    width: 100%;
+    margin: 20px;
+    height: 50px;
+}
+.item p{
+   font-weight: bold;
+   margin: 2px;
+   font-size: larger;
+   
+    
+}
+.item input{
+    width: 100%;
+     height:60%;
+     border-radius: 4px;
+     font-size: large;
+     background-color:white;
+     
+
+}
+.item input:hover{
+    box-shadow: 0px 2px 4px 1px black;
+}
+.button-div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    height: 40px;
+}
+.button{
+    margin: 3px;
+    width: 10%;
+    height: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all ease-in-out;
+    border: none;
+    background-color: rgb(42, 116, 185);
+    font-weight: bold;
+}
+.button:hover{
+    transform: scale(1.08);
+    margin: 5px;
+    box-shadow: 0px 2px 4px 1px black;
+    text-decoration: underline;
+}
+
+</style>
+<body>
+    <div class="container">
+        <div class="title"><h1>Student Enrollment Form</h1></div>
+        <div class="form-div">
+            <form  method="get">
+                <div class="item">
+                   <p>Roll No:</p>
+                    <input type="text" id="rollno" onchange="getdata()">
+                </div>
+                <div class="item">
+                    <p>Full Name:</p>
+                    <input type="text" id="name">
+                </div>
+                <div class="item">
+                    <p>Class:</p>
+                    <input type="text" id="class" >
+                </div>
+                <div class="item">
+                    <p>Birth-Date:</p>
+                    <input type="date" id="birth">
+                </div>
+                <div class="item">
+                    <p>Address:</p>
+                    <input type="text" id="address">
+                </div>
+                <div class="item">
+                    <p>Enrollment-Date:</p>
+                    <input type="date" id="enrollment">
+                </div>
+                <div class="button-div">
+                    <input type="button" class="button"  value="Save" id="save" onclick="saveData()">
+                    <input type="button" class="button" value="Change" id="change" onchange="changeData()">
+                    <input type="button" class="button" value="Reset" id="reset" onchange="resetForm()">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="https://login2explore.com/jpdb/resources/js/0.0.4/jpdb-commons.js"></script>
+<script src="file.js"></script>
+</html>
