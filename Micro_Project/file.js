@@ -16,7 +16,7 @@ var jpdbIML = "/api/iml";
 var jpdbIRL = "/api/irl";
 var stuDBName='SCHOOL-DB';
 var stuRelationName='STUDENT-TABLE';
-var connToken=''
+var connToken='90936570|-31949306829225253|90963171'
 
 function saveRec(jsonStrObj){
     var lvdata=JSON.parse(jsonStrObj.data);
